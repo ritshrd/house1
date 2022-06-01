@@ -1,0 +1,43 @@
+
+/*MODAL CSS*/
+
+
+.modal-contenido{
+    background-color: white;
+    width: 55%;
+    height: 500px;
+    margin: 5% auto;
+    position: relative;
+    border: solid;
+    border-image: url(../images/border.png) 41 22 28 22;
+    border-width: 40px 30px 30px 30px;
+    background-clip: padding-box;
+    
+}
+  
+  .modal{
+    background-color: rgba(0,0,0,.8);
+    position:fixed;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    opacity:0;
+    pointer-events:none;
+    transition: all 1s;
+  }
+  #mainMod:target {
+    opacity:1;
+    pointer-events:auto;
+    z-index: 10;
+  }
+  #bookMod:target{
+    opacity:1;
+    pointer-events:auto;
+    z-index: 10;
+  }
+  .closeModal {
+    position: absolute;
+    right: 0;
+    margin: -50px;
+}

@@ -1,0 +1,192 @@
+
+body{
+    background: #282727;
+}
+
+.container{
+position: relative;
+width: 1440px;
+height: 820px;
+background: gray;
+background-image: url(../images/back.png);
+/*left: 50%;
+transform: matrix(1, 0, 0, 1, -720, 0);*/
+background-size: 1440px 820px;
+margin: 0 auto;
+user-select: none;
+
+}
+.logo{
+    position: absolute;
+    z-index: 11;
+    left: 20px;
+    top: 20px;
+}
+  
+.navButtons{
+
+        position: relative;
+        top: 724px;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px;
+        z-index: 10;
+
+}
+.effects{
+    position: relative;
+    z-index: 10;
+    pointer-events: none;
+}
+.effects img{
+    width: 1440px;
+    height: 820px;
+    position: absolute;
+    
+}
+.con{
+    display: flex;
+    justify-content: center;
+}
+
+.lampara1{
+    left: 192px;
+}
+.lampara2{
+    left: 586px;
+}
+.lampara3{
+    left: 945px;
+}
+.luz1{
+    top: 207px;
+    left: -62px;
+
+}
+.luz2{
+    top: 207px;
+    left: 333px;
+}
+.luz3{
+    top: 207px;
+    left: 690px;
+}
+.overlay{
+    mix-blend-mode: overlay;
+}
+#tv {
+    top: 197px;
+    left: 723px;
+    pointer-events: none;
+}
+canvas#reloj {
+    top: 111px;
+    left: 669px;
+}
+canvas#libro {
+    left: 604px;
+    top: 323px;
+
+}
+canvas#guante {
+    top: 183px;
+    left: 1215px;
+
+}
+canvas#espejo {
+    left: 929px;
+    bottom: 103px;
+}
+canvas#telescopio {
+
+    top: 268px;
+    left: 143px;
+
+}
+canvas#acuario {
+
+    top: 157px;
+    left: 268px;
+
+
+}
+canvas#storytime {
+    left: 659px;
+    top: 378px;
+}
+canvas#lupa {
+    top: 446px;
+    left: 580px;
+}
+canvas#gogreen {
+    top: 313px;
+    left: -98px;
+}
+canvas#global {
+    top: 322px;
+    left: 64px;
+}
+
+canvas#sillon {
+    left: 727px;
+    top: 315px;
+
+}
+canvas#ventana {
+    right: 963px;
+    top: 213px;
+    z-index: -1;
+
+}
+canvas#interruptor {
+    right: 8px;
+    top: 355px;
+    z-index: -1;
+
+}
+canvas#interruptor {
+    right: 8px;
+    top: 355px;
+    z-index: 0;
+
+}
+canvas#diploma {
+    left: 1199px;
+    top: 274px;
+
+}
+canvas#estatua {
+    left: 870px;
+    top: 200px;
+}
+canvas#letras {
+    left: 1202px;
+    top: 440px;
+ }
+
+
+.absolute{
+    position: absolute;
+}
+.pointer{
+    cursor: pointer;
+}
+.scale{
+    transform: scale(0.5);
+}
+
+
+.foot{
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    z-index: 1;
+    text-align: center;
+
+
+    bottom: 0;
+    margin: 0 auto;
+    width: 98%;
+    padding-top: 20px;
+}
+
+

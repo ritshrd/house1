@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kiddo's club</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="assets/modals.css" />
+    <link rel="stylesheet" href="assets/loader.css" />
+    <script src="https://unpkg.com/@rive-app/webgl"></script>
+    
+    <script src="assets/js/lottie-player.js"></script>
+    <script src="assets/js/modernizr-2.6.2.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+  </head>
+
+
+
+  <body>
+      
+   <!--loader-->
+      <div id="loader-wrapper">
+        <div id="loader">
+          <lottie-player
+              src="images/kiddo_logo_loader.json"
+              background="transparent"
+              speed="1"
+              style="width: 30vw; height: 25vh;"
+              loop
+              autoplay
+          ></lottie-player>
+        </div>
+
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+        </div>
+
+   
+
+  <div id="activeZone" class="container">
+
+    <div class="logo"><a href="https://kiddosclub.kiddomagazine.com/"><img src="images/kiddo_logo.png" alt=""></a></div>
+
+        <div class="off">
+          <div class="lampara1 absolute">
+            <img src="images/lampara.png" width="100px" alt="" />
+          </div>
+          <div class="lux luz1 absolute overlay">
+            <img src="images/luz_lampara.png" width="550px" alt="" />
+          </div>
+
+          <div class="lampara2 absolute">
+            <img src="images/lampara.png" width="100px" alt="" />
+          </div>
+          <div class="lux luz2 absolute overlay">
+            <img src="images/luz_lampara.png" width="550px" alt="" />
+          </div>
+
+          <div class="lampara3 absolute">
+            <img src="images/lampara.png" width="100px" alt="" />
+          </div>
+          <div class="lux luz3 absolute overlay">
+            <img src="images/luz_lampara.png" width="550px" alt="" />
+          </div>
+
+          <div class="effects"><img src="images/back1.png" alt="" /></div>
+          <div class="effects overlay">
+            <img src="images/back2.png" alt="" />
+          </div>
+        </div>
+
+        <!--reloj-->
+        <a href="#bookMod">
+        <canvas
+        id="reloj"
+        class="absolute pointer scale"
+        width="120"
+        height="240"
+      >
+      <script>
+        const relojBtn = document.getElementById("reloj");
+        const newReloj = new rive.Rive({
+          src: "riv/reloj.riv",
+          canvas: document.getElementById("reloj"),
+          autoplay: true,
+          stateMachines: "SM-reloj",
+          onLoad: (_) => {
+            const inputs = newReloj.stateMachineInputs("SM-reloj");
+            const relojTrigger = inputs.find((i) => i.name === "hoverReloj");
+
+            relojBtn.onmouseover = () => (relojTrigger.value = true);
+            relojBtn.onmouseleave = () => (relojTrigger.value = false);
+            
+          },
+        });
+      </script>
+         
+      </canvas>
+</a>
+        <!--reloj-->
+
+            <!--letras-->
+            <a href="#bookMod">
+            <canvas
+            id="letras"
+            class="absolute pointer scale"
+            width="140"
+            height="183"
+          >
+            <script>
+              const letrasBtn = document.getElementById("letras");
+              const newLetr = new rive.Rive({
+                src: "riv/letras.riv",
+                canvas: document.getElementById("letras"),
+                autoplay: true,
+                stateMachines: "SM-letras",
+             
+                onLoad: (_) => {
+                  const inputs = newLetr.stateMachineInputs("SM-letras");
+                  const letrasTrigger = inputs.find((i) => i.name === "hoverLetra");
+
+                  letrasBtn.onmouseover = () => (letrasTrigger.value = true);
+                  letrasBtn.onmouseleave = () => (letrasTrigger.value = false);
+    
+                  
+                },
+              });
+            </script>
+          </canvas>
+    </a>
+            <!--letras-->
+
+            
+        <!--libro-->
+
+        <a href="#bookMod"><canvas
+          id="libro"
+          class="absolute pointer scale"
+          width="180"
+          height="180"
+        >
+          <script>
+            const libroBtn = document.getElementById("libro");
+            const lib = new rive.Rive({
+              src: "riv/libro.riv",
+              canvas: document.getElementById("libro"),
+              autoplay: true,
+              stateMachines: "SM-libro",
+              onLoad: (_) => {
+                const inputs = lib.stateMachineInputs("SM-libro");
+                const libTrigger = inputs.find((i) => i.name === "hover");
+                libroBtn.onmouseover = () => (libTrigger.value = true);
+                libroBtn.onmouseleave = () => (libTrigger.value = false);
+
+   
+              },
+            });
+          </script>
+        </canvas></a>
+
+        <div id="tv" class="absolute pointer scale"  ><img src="riv/tv.gif" alt=""></div>
+        <!--tv
+
+        <canvas id="tv" class="absolute pointer scale" width="400" height="300">
+          <script>
+            const tvBtn = document.getElementById("tv");
+            const tvv = new rive.Rive({
+              src: "riv/tv.riv",
+              canvas: document.getElementById("tv"),
+              animation: "tvAnim",
+              autoplay: true,
+
+              onLoad: (_) => {
+                
+              },
+            });
+          </script>
+        </canvas>-->
+
+        <!--espejo-->
+        <a href="#bookMod">
+        <canvas
+          id="espejo"
+          class="absolute pointer scale"
+          width="250"
+          height="500"
+        >
+          <script>
+            const espejoBtn = document.getElementById("espejo");
+            const esp = new rive.Rive({
+              src: "riv/espejo.riv",
+              canvas: document.getElementById("espejo"),
+              autoplay: true,
+              stateMachines: "espejoState",
+              onLoad: (_) => {
+                const inputs = esp.stateMachineInputs("espejoState");
+                const espTrigger = inputs.find(
+                  (i) => i.name === "Boolean 1"
+                );
+                espejoBtn.onmouseover = () => (espTrigger.value = true);
+                espejoBtn.onmouseleave = () => (espTrigger.value = false);
+    
+              },
+            });
+          </script>
+        </canvas>
+</a>
+        <!--estatua-->
+        <a href="#bookMod">
+        <canvas
+          id="estatua"
+          class="absolute pointer scale"
+          width="210"
+          height="510"
+        >
+          <script>
+            const estatuaBtn = document.getElementById("estatua");
+            const esta = new rive.Rive({
+              src: "riv/estatua.riv",
+              canvas: document.getElementById("estatua"),
+              animation: "estatuaAnim",
+              autoplay: true,
+              stateMachines: "SM-estatua",
+              onLoad: (_) => {
+                const inputs = esta.stateMachineInputs("SM-estatua");
+                const estTrigger = inputs.find((i) => i.name === "Hover");
+                estatuaBtn.onmouseover = () => (estTrigger.value = true);
+                estatuaBtn.onmouseleave = () => (estTrigger.value = false);
+
+            
+              },
+            });
+          </script>
+        </canvas>
+        </a>
+        <!--guante-->
+        <a href="#bookMod">
+        <canvas
+          id="guante"
+          class="absolute pointer scale"
+          width="200"
+          height="400"
+        >
+          <script>
+            const guanteBtn = document.getElementById("guante");
+            const gua = new rive.Rive({
+              src: "riv/guante.riv",
+              canvas: document.getElementById("guante"),
+              autoplay: true,
+              stateMachines: "SM-guante",
+              onLoad: (_) => {
+                const inputs = gua.stateMachineInputs("SM-guante");
+                const guaTrigger = inputs.find((i) => i.name === "Hover");
+                guanteBtn.onmouseover = () => (guaTrigger.value = true);
+                guanteBtn.onmouseleave = () => (guaTrigger.value = false);
+
+               
+              },
+            });
+          </script>
+        </canvas>
+</a>
+        <!--telescopio-->
+        <a href="#bookMod">
+        <canvas
+          id="telescopio"
+          class="absolute pointer scale"
+          width="270"
+          height="310"
+        >
+          <script>
+            const explorerBtn = document.getElementById("telescopio");
+            const exp = new rive.Rive({
+              src: "riv/explorer.riv",
+              canvas: document.getElementById("telescopio"),
+              autoplay: true,
+              Animation: "telescopio",
+              onLoad: (_) => {
+              
+              },
+            });
+          </script>
+        </canvas>
+</a>
+        <canvas
+          id="acuario"
+          class="absolute pointer scale"
+          width="510"
+          height="635"
+        >
+          <script>
+            const acuarioBtn = document.getElementById("acuario");
+            const acua = new rive.Rive({
+              src: "riv/acuario.riv",
+              canvas: document.getElementById("acuario"),
+              autoplay: true,
+              Animation: "acuario",
+              onLoad: (_) => {
+               
+              },
+            });
+          </script>
+        </canvas>
+
+        <!--storytime-->
+        <a href="#bookMod">
+        <canvas
+          id="storytime"
+          class="absolute pointer scale"
+          width="360"
+          height="222"
+        >
+          <script>
+            const storytimeBtn = document.getElementById("storytime");
+            const sto = new rive.Rive({
+              src: "riv/storytime.riv",
+              canvas: document.getElementById("storytime"),
+              autoplay: true,
+              stateMachines: "SM-storytime",
+              onLoad: (_) => {
+                const inputs = sto.stateMachineInputs("SM-storytime");
+                const stoTrigger = inputs.find((i) => i.name === "hover");
+                storytimeBtn.onmouseover = () => (stoTrigger.value = true);
+                storytimeBtn.onmouseleave = () => (stoTrigger.value = false);
+
+               
+              },
+            });
+          </script>
+        </canvas>
+</a>
+        <!--lupa-->
+        <a href="#bookMod">
+        <canvas
+          id="lupa"
+          class="absolute pointer scale"
+          width="200"
+          height="120"
+        >
+          <script>
+            const lupaBtn = document.getElementById("lupa");
+            const lup = new rive.Rive({
+              src: "riv/lupa.riv",
+              canvas: document.getElementById("lupa"),
+              autoplay: true,
+              stateMachines: "SM-lupa",
+              onLoad: (_) => {
+                const inputs = lup.stateMachineInputs("SM-lupa");
+                const lupTrigger = inputs.find((i) => i.name === "hover");
+                lupaBtn.onmouseover = () => (lupTrigger.value = true);
+                lupaBtn.onmouseleave = () => (lupTrigger.value = false);
+
+                
+              },
+            });
+          </script>
+        </canvas></a>
+        <!--gogreen-->
+        <a href="#bookMod">
+        <canvas
+          id="gogreen"
+          class="absolute pointer scale"
+          width="390"
+          height="590"
+        >
+          <script>
+            const gogreenBtn = document.getElementById("gogreen");
+            const gog = new rive.Rive({
+              src: "riv/gogreen.riv",
+              canvas: document.getElementById("gogreen"),
+              autoplay: true,
+              stateMachines: "SM-gogreen",
+              onLoad: (_) => {
+                const inputs = gog.stateMachineInputs("SM-gogreen");
+                const gogTrigger = inputs.find((i) => i.name === "hover");
+                gogreenBtn.onmouseover = () => (gogTrigger.value = true);
+                gogreenBtn.onmouseleave = () => (gogTrigger.value = false);
+
+              },
+            });
+          </script>
+        </canvas>
+      </a>
+        <!--global-->
+        <a href="#bookMod">
+        <canvas
+          id="global"
+          class="absolute pointer scale"
+          width="180"
+          height="270"
+        >
+          <script>
+            const globalBtn = document.getElementById("global");
+            const glo = new rive.Rive({
+              src: "riv/global.riv",
+              canvas: document.getElementById("global"),
+              animation: "globalAnim",
+              autoplay: true,
+
+              onLoad: (_) => {
+              },
+            });
+          </script>
+        </canvas>
+      </a>
+        <!--sillon-->
+
+        <canvas id="sillon" class="absolute scale" width="450" height="450">
+          <script>
+            const sillonBtn = document.getElementById("sillon");
+            const sill = new rive.Rive({
+              src: "riv/sillon.riv",
+              canvas: document.getElementById("sillon"),
+              animation: "sillonAnim",
+              autoplay: true,
+            });
+          </script>
+        </canvas>
+
+        <!--ventana-->
+
+        <canvas id="ventana" class="absolute scale" width="320" height="320">
+          <script>
+            const ventanaBtn = document.getElementById("ventana");
+            const ven = new rive.Rive({
+              src: "riv/ventana.riv",
+              canvas: document.getElementById("ventana"),
+              animation: "ventanaAnim",
+              autoplay: true,
+            });
+          </script>
+        </canvas>
+    
+        <!--interruptor-->
+        
+        <canvas
+          id="interruptor"
+          class="absolute pointer scale"
+          width="90"
+          height="90"
+        >
+          <script>
+            const interruptorBtn = document.getElementById("interruptor");
+            const int = new rive.Rive({
+              src: "riv/interruptor.riv",
+              canvas: document.getElementById("interruptor"),
+              autoplay: true,
+              stateMachines: "SM-interruptor",
+
+              onLoad: (_) => {
+                let luxx = false;
+                const inputs = int.stateMachineInputs("SM-interruptor");
+                const intTrigger = inputs.find((i) => i.name === "trigger");
+                interruptorBtn.onclick = () => {
+                  intTrigger.fire();
+                  verify();
+                };
+
+                /*verify*/
+                function verify() {
+                  if (luxx == false) {
+                    TweenMax.to(".lux>img", 0.5, {
+                      css: { opacity: 1 },
+                      ease: Quad.easeInOut,
+                    });
+                    TweenMax.to(".effects>img", 0.5, {
+                      css: { opacity: 0 },
+                      ease: Quad.easeInOut,
+                    });
+
+                    luxx = true;
+                  } else {
+                    TweenMax.to(".lux>img", 0.5, {
+                      css: { opacity: 0 },
+                      ease: Quad.easeInOut,
+                    });
+                    TweenMax.to(".effects>img", 0.5, {
+                      css: { opacity: 1 },
+                      ease: Quad.easeInOut,
+                    });
+
+                    luxx = false;
+                  }
+                }
+              },
+            });
+          </script>
+        </canvas>
+
+         
+        <!--diploma-->
+
+        <a href="#bookMod"><canvas
+          id="diploma"
+          class="absolute pointer scale"
+          width="130"
+          height="230"
+        >
+          <script>
+            const diplomaBtn = document.getElementById("diploma");
+            const dip = new rive.Rive({
+              src: "riv/diploma.riv",
+              canvas: document.getElementById("diploma"),
+              animation: "diplomaAnim",
+              autoplay: true,
+
+              onLoad: (_) => {
+              
+            
+              },
+            });
+          </script>
+        </canvas></a>
+
+   
+        <div class="navButtons">
+          <a href="https://kiddosclub.kiddomagazine.com/"><img src="images/home.png" alt=""></a>
+          <a href="#mainMod"><img src="images/info.png" alt=""></a>
+        </div>
+
+
+<!--MODALS MAIN-->        
+
+      <div id="mainMod" class="modal">
+        <div class="modal-contenido">
+          <div class="closeModal"><a href="#"><img src="images/closeModal.png" alt=""></a></div>
+          <h1>INSTRUCCIONES</h1>
+          <iframe src="" frameborder="0" width="100%" height="100%"></iframe>
+        </div>  
+      </div>
+      
+<!--MODALS-->       
+
+      <div id="bookMod" class="modal">
+        <div class="modal-contenido">
+          <div class="closeModal"><a href="#"><img src="images/closeModal.png" alt=""></a></div>
+          <iframe src="https://kiddomagazine.com/es/club-kiddo/nuestras-paginas" frameborder="0" width="100%" height="100%"></iframe>
+        </div>  
+      </div>
+
+<!--MODALS-->       
+
+
+
+<!--MODALS-->        
+<!--MODALS-->        
+<!--MODALS-->        
+<!--MODALS-->        
+<!--MODALS-->        
+<!--MODALS-->        
+<!--MODALS-->        
+
+      </div>
+  
+      <div class="foot">Kiddo Magazine 2022</div>
+
+
+     
+  </body>
+
+  <script>
+    /*lights off*/
+    document.addEventListener(
+      "DOMContentLoaded",
+      function () {
+        TweenMax.to(".luz1>img", 0, { css: { opacity: 0 } });
+        TweenMax.to(".luz2>img", 0, { css: { opacity: 0 } });
+        TweenMax.to(".luz3>img", 0, { css: { opacity: 0 } });
+      },
+      false
+    );
+
+
+  </script>
+
+<!--loader-->
+<script src="/assets/js/main.js"></script>
+<!--loader-->
+</html>
