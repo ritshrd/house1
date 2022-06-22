@@ -163,7 +163,11 @@ canvas#letras {
     left: 1202px;
     top: 440px;
  }
-
+#revistero {
+    left: 483px;
+    top: 435px;
+    z-index: 1;
+ }
 
 .absolute{
     position: absolute;
