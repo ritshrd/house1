@@ -1,17 +1,18 @@
 
 body{
     background: #282727;
+    margin: 0;
 }
 
 .container{
 position: relative;
-width: 1440px;
-height: 820px;
+width: 1900px;
+height: 1080px;
 background: gray;
 background-image: url(../images/back.png);
 /*left: 50%;
 transform: matrix(1, 0, 0, 1, -720, 0);*/
-background-size: 1440px 820px;
+background-size: 1900px 1080px;
 margin: 0 auto;
 user-select: none;
 
@@ -39,8 +40,8 @@ user-select: none;
     pointer-events: none;
 }
 .effects img{
-    width: 1440px;
-    height: 820px;
+    width: 1900px;
+    height: 1080px;
     position: absolute;
     
 }
@@ -50,86 +51,86 @@ user-select: none;
 }
 
 .lampara1{
-    left: 192px;
+    left: 287px;
 }
 .lampara2{
-    left: 586px;
+    left: 780px;
 }
 .lampara3{
-    left: 945px;
+    left: 1257px;
 }
 .luz1{
-    top: 207px;
-    left: -62px;
+    top: 261px;
+    left: 16px;
 
 }
 .luz2{
-    top: 207px;
-    left: 333px;
+    top: 261px;
+    left: 513px;
 }
 .luz3{
-    top: 207px;
-    left: 690px;
+    top: 259px;
+    left: 990px;
 }
 .overlay{
     mix-blend-mode: overlay;
 }
 #tv {
-    top: 197px;
-    left: 723px;
+    top: 272px;
+    left: 1020px;
     pointer-events: none;
 }
 canvas#reloj {
-    top: 111px;
-    left: 669px;
+    top: 185px;
+    left: 900px;
 }
 canvas#libro {
-    left: 604px;
-    top: 323px;
+    left: 828px;
+    top: 451px;
 
 }
 canvas#guante {
-    top: 183px;
-    left: 1215px;
+    top: 306px;
+    left: 1641px;
 
 }
 canvas#espejo {
-    left: 929px;
-    bottom: 103px;
+    left: 1271px;
+    bottom: 202px;
 }
 canvas#telescopio {
 
-    top: 268px;
-    left: 143px;
+    top: 404px;
+    left: 236px;
 
 }
 canvas#acuario {
 
-    top: 157px;
-    left: 268px;
+    top: 301px;
+    left: 436px;
 
 
 }
 canvas#storytime {
-    left: 659px;
-    top: 378px;
+    left: 923px;
+    top: 510px;
 }
 canvas#lupa {
-    top: 446px;
-    left: 580px;
+    top: 578px;
+    left: 810px;
 }
 canvas#gogreen {
-    top: 313px;
-    left: -98px;
+    top: 481px;
+    left: -71px;
 }
 canvas#global {
-    top: 322px;
-    left: 64px;
+    top: 447px;
+    left: 120px;
 }
 
 canvas#sillon {
-    left: 727px;
-    top: 315px;
+    left: 1042px;
+    top: 484px;
 
 }
 canvas#ventana {
@@ -138,34 +139,29 @@ canvas#ventana {
     z-index: -1;
 
 }
-canvas#interruptor {
-    right: 8px;
-    top: 355px;
-    z-index: -1;
 
-}
 canvas#interruptor {
     right: 8px;
-    top: 355px;
+    top: 480px;
     z-index: 0;
 
 }
 canvas#diploma {
-    left: 1199px;
-    top: 274px;
+    left: 1607px;
+    top: 394px;
 
 }
 canvas#estatua {
-    left: 870px;
-    top: 200px;
+    left: 1183px;
+    top: 342px;
 }
 canvas#letras {
-    left: 1202px;
-    top: 440px;
+    left: 1601px;
+    top: 615px;
  }
 #revistero {
-    left: 483px;
-    top: 435px;
+    left: 659px;
+    top: 617px;
     z-index: 1;
  }
 
@@ -176,7 +172,7 @@ canvas#letras {
     cursor: pointer;
 }
 .scale{
-    transform: scale(0.5);
+    transform: scale(0.65);
 }
 
 
